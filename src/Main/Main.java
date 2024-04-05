@@ -2,19 +2,23 @@ package Main;
 import  Level1.*;
 import  Level2.*;
 import Box.*;
+import PanelChange.*;
 
-public class Main {
+import javax.swing.*;
+
+public class Main extends JFrame{
     public static void main(String[] args) {
+        MainPanel w = new MainPanel();
+        GatyaPanel g = new GatyaPanel();
+        FightPanel f = new FightPanel();
+        JPanel c = new JPanel();
+        PanelSetting panels = new PanelSetting(w.getMainPanel(), g.getFrame(), f.getFrame());
+//        PanelSetting panels = new PanelSetting(w.getMainPanel(), g.getFrame(), c);
 
-        Isoda isoda = new Isoda();
-        Panaisonic panaIso = new Panaisonic();
-
-        System.out.println(isoda.getName());
-        System.out.println(isoda.getType());
-        System.out.println(isoda.getStrongness());
-
-        panaIso.explain();
-
-        new Window();
+        panels.setTitle("Title Window");
+        panels.setSize(1000,1000);
+        panels.setLocationRelativeTo(null);
+        panels.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        panels.setVisible(true);
     }
 }

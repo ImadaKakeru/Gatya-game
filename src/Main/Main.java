@@ -1,7 +1,7 @@
 package Main;
 import  Level1.*;
 import  Level2.*;
-
+import Box.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +14,7 @@ public class Main {
         System.out.println(isoda.getStrongness());
 
         panaIso.explain();
+
+        new Window();
     }
 }

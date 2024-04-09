@@ -9,6 +9,8 @@ public class GatyaPanel extends JFrame {
     private JButton oneGatya;
     private JButton tenGatya;
     private JPanel Frame;
+    private JPanel row1;
+    private JPanel row2;
 
     public GatyaPanel(){
         this.Frame = new JPanel();
@@ -16,6 +18,9 @@ public class GatyaPanel extends JFrame {
         this.output = new JTextField();
         this.oneGatya = new JButton("ガチャ");
         this.tenGatya = new JButton("10連ガチャ");
+        this.row1 = new JPanel();
+        this.row2 = new JPanel();
+
         output.setMaximumSize(new Dimension(100, 40));
         output.setFont(new Font("Monospaced", Font.BOLD, 27));
         output.setDisabledTextColor(new Color(0, 0, 0));
